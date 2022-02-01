@@ -1,0 +1,412 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "BadTaste";
+    src: url(RedFonts/HanaleiFill-Regular.ttf);
+}
+
+body {
+    height: 100vh;
+    background-image: url(../RedImages/smokeBg.png);
+}
+
+p {
+    font-family: "BadTaste";
+}
+
+header {
+    height: 15vh;
+    text-align: center;
+}
+
+header h1,
+header h2 {
+    padding: 10px 0px;
+    font-family: "badTaste";
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+}
+
+span {
+    color: red;
+}
+
+.section2 {
+    height: 70vh;
+}
+
+footer {
+    height: 15vh;
+    text-align: center;
+}
+
+footer p {
+    padding-top: 10px;
+    font-family: "badTaste";
+    letter-spacing: 0.1em;
+}
+
+footer img {
+    padding-top: 10px;
+    width: 15%;
+}
+
+.miniCont {
+    width: 300px;
+    height: 70vh;
+    margin: auto;
+}
+
+#contCar {
+    width: 300px;
+    height: 70vh;
+}
+
+.micro {
+    position: relative;
+    height: 200px;
+    top: 29%;
+    transform-style: preserve-3d;
+    transform: rotateX(-360deg) translateZ(-100px);
+    animation: rotateX 10s infinite linear;
+}
+
+.car {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    line-height: 50%;
+    text-align: center;
+}
+
+.car img {
+    width: 100%;
+    height: 250px;
+    border: 1px solid rgb(75, 71, 71);
+    border-radius: 9px 9px 9px 9px;
+}
+
+.car p {
+    position: absolute;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+#car1 {
+    transform: rotateX(0deg) translateZ(100px);
+}
+
+#car2 {
+    transform: rotateX(120deg) translateZ(100px);
+}
+
+#car3 {
+    transform: rotateX(240deg) translateZ(100px);
+}
+
+#car4 {
+    transform: rotateX(120deg) translateZ(300px);
+    display: none;
+}
+
+#car5 {
+    transform: rotateX(160deg) translateZ(300px);
+    display: none;
+}
+
+#car6 {
+    transform: rotateX(200deg) translateZ(300px);
+    display: none;
+}
+
+#car7 {
+    transform: rotateX(240deg) translateZ(300px);
+    display: none;
+}
+
+#car8 {
+    transform: rotateX(280deg) translateZ(300px);
+    display: none;
+}
+
+#car9 {
+    transform: rotateX(320deg) translateZ(300px);
+    display: none;
+}
+
+@keyframes rotateX {
+    0% {
+        transform: rotateX(360deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+
+/*---------------------------------------------------------------------------*/
+
+@media screen and (min-width:501px) {
+    main {
+        height: 65vh;
+    }
+    .miniCont {
+        width: 300px;
+        height: 45vh;
+        margin: 0px auto;
+    }
+    #contCar {
+        width: 300px;
+        height: 45vh;
+        line-height: 45vh;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(-360deg) translateZ(-122.5px);
+        animation: rotateY 10s infinite linear;
+    }
+    .micro {
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-360deg);
+        animation: rotateX 10s infinite linear;
+    }
+    .car {
+        position: absolute;
+        width: 300px;
+        height: 5%;
+        text-align: center;
+    }
+    .car img {
+        width: 100%;
+        height: 200px;
+        border: 1px solid rgb(43, 40, 40);
+        border-radius: 9px 9px 9px 9px;
+    }
+    .car p {
+        position: initial;
+        padding-bottom: 10%;
+    }
+    #car1 {
+        transform: rotateY(0deg) translateZ(150px);
+    }
+    #car2 {
+        transform: rotateY(120deg) translateZ(150px);
+    }
+    #car3 {
+        transform: rotateY(240deg) translateZ(150px);
+    }
+    footer p {
+        padding-top: 0px;
+        font-family: "badTaste";
+        letter-spacing: 0.1em;
+    }
+    footer img {
+        padding-top: 10px;
+        width: 15%;
+    }
+    @keyframes rotateY {
+        0% {
+            transform: rotateY(360deg);
+        }
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+    @keyframes rotateX {
+        0% {
+            transform: rotateX(0deg);
+        }
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width:655px) {
+    footer p {
+        font-family: "badTaste";
+        letter-spacing: 0.1em;
+    }
+    footer img {
+        padding-top: 10px;
+        width: 15%;
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width:701px) {
+    .miniCont {
+        width: 300px;
+        height: 50vh;
+        margin: auto;
+    }
+    #contCar {
+        width: 300px;
+        height: 50vh;
+        line-height: 500px;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(-360deg) translateZ(-122.5px);
+        animation: rotateY 15s infinite linear;
+    }
+    .micro {
+        position: relative;
+        top: 22%;
+        transform-style: preserve-3d;
+        transform: rotateX(-360deg);
+        animation: rotateX 20s infinite linear;
+    }
+    .car {
+        position: absolute;
+        width: 300px;
+        height: 5%;
+        text-align: center;
+    }
+    .car img {
+        width: 100%;
+        height: 200px;
+        border: 1px solid rgb(54, 52, 52);
+        border-radius: 9px 9px 9px 9px;
+    }
+    #car1 {
+        transform: rotateY(0deg) translateZ(300px);
+    }
+    #car2 {
+        transform: rotateY(60deg) translateZ(300px);
+    }
+    #car3 {
+        transform: rotateY(120deg) translateZ(300px);
+    }
+    #car4 {
+        transform: rotateY(180deg) translateZ(300px);
+        display: block;
+    }
+    #car5 {
+        transform: rotateY(240deg) translateZ(300px);
+        display: block;
+    }
+    #car6 {
+        transform: rotateY(300deg) translateZ(300px);
+        display: block;
+    }
+    @keyframes rotateY {
+        0% {
+            transform: rotateY(360deg);
+        }
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+    @keyframes rotateX {
+        0% {
+            transform: rotateX(0deg);
+        }
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+
+@media screen and (min-width:900px) {
+    main {
+        height: 63vh;
+    }
+    miniCont {
+        width: 300px;
+        margin: auto;
+    }
+    #contCar {
+        width: 300px;
+        line-height: 500px;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateY(-360deg) translateZ(-122.5px);
+        animation: rotateY 20s infinite linear;
+    }
+    .micro {
+        position: relative;
+        top: 18%;
+        transform-style: preserve-3d;
+        transform: rotateX(-360deg);
+        animation: rotateX 20s infinite linear;
+    }
+    .car {
+        position: absolute;
+        width: 300px;
+        height: 5%;
+        text-align: center;
+    }
+    .car img {
+        width: 100%;
+        height: 200px;
+        border: 1px solid rgb(53, 51, 51);
+        border-radius: 9px 9px 9px 9px;
+    }
+    #car1 {
+        transform: rotateY(0deg) translateZ(440px);
+    }
+    #car2 {
+        transform: rotateY(40deg) translateZ(440px);
+    }
+    #car3 {
+        transform: rotateY(80deg) translateZ(440px);
+    }
+    #car4 {
+        transform: rotateY(120deg) translateZ(440px);
+    }
+    #car5 {
+        transform: rotateY(160deg) translateZ(440px);
+    }
+    #car6 {
+        transform: rotateY(200deg) translateZ(440px);
+    }
+    #car7 {
+        transform: rotateY(240deg) translateZ(440px);
+        display: block;
+    }
+    #car8 {
+        transform: rotateY(280deg) translateZ(440px);
+        display: block;
+    }
+    #car9 {
+        transform: rotateY(320deg) translateZ(440px);
+        display: block;
+    }
+    @keyframes rotateY {
+        0% {
+            transform: rotateY(360deg);
+        }
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+    @keyframes rotateX {
+        0% {
+            transform: rotateX(0deg);
+        }
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width:1001px) {
+    main {
+        height: 60vh;
+    }
+}

@@ -1,0 +1,224 @@
+@font-face {
+    font-family: "slackey";
+    src: url(../RedFonts/Slackey-Regular.ttf);
+}
+
+a {
+    position: absolute;
+    z-index: 2;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: black;
+    font-family: "slackey";
+    padding-top: 5px;
+}
+
+a:visited {
+    color: chartreuse;
+}
+
+p {
+    font-family: "slackey";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0px auto;
+    width: 100%;
+    height: 20vh;
+    background: black;
+    display: flex;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container,
+.container2 {
+    margin: 0px auto;
+    position: relative;
+    height: 20vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+h1,
+.gradient,
+.gradient2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    padding-left: 4px;
+    z-index: 1;
+    background-color: black;
+    width: 90%;
+    mix-blend-mode: multiply;
+    font-family: "slackey";
+}
+
+.gradient,
+.gradient2 {
+    height: 20vh;
+    width: 400%;
+    background: linear-gradient(45deg, yellow, red, chartreuse, darkorange, yellow, red, chartreuse, darkorange, yellow, red, chartreuse, darkorange, yellow, red, chartreuse, darkorange);
+    animation: gradient 20s linear infinite alternate;
+}
+
+footer {
+    position: absolute;
+    margin: 0px auto;
+    width: 100%;
+    height: 20vh;
+    background: black;
+    display: flex;
+    bottom: 0px;
+}
+
+footer h1 {
+    font-size: 0.8em;
+}
+
+@keyframes gradient {
+    0% {
+        transform: translate(-25%, -50%)
+    }
+    100% {
+        transform: translate(-75%, -50%);
+    }
+}
+
+.portfolio {
+    position: relative;
+    top: -64px;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 800px;
+    height: 60vh;
+    margin: 4rem auto;
+    z-index: 1;
+}
+
+.image {
+    min-width: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    overflow: hidden;
+    position: relative;
+}
+
+#image1 {
+    background-image: url(../RedImages/aliG1.jpg);
+    background-size: cover;
+}
+
+#image2 {
+    background-image: url(../RedImages/aliG2.jpg);
+    background-size: cover;
+}
+
+#image3 {
+    background-image: url(../RedImages/aliG3.jpg);
+    background-size: cover;
+}
+
+#image4 {
+    background-image: url(../RedImages/aliG4.jpg);
+    background-size: cover;
+}
+
+#image5 {
+    background-image: url(../RedImages/aliG5.jpg);
+    background-size: cover;
+}
+
+.image.active {
+    flex-grow: 100;
+    max-width: 400px;
+    margin: 0;
+    border-radius: 7px;
+    background-size: auto 100%;
+}
+
+.image:not(.active) {
+    flex-grow: 1;
+    border-radius: 5px;
+}
+
+.text-container {
+    width: 100%;
+    height: 400px;
+    padding: 2rem;
+    visibility: hidden;
+    transform: translateX(300px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    background: linear-gradient(354deg, black 0%, transparent 72%);
+    color: rgb(147, 216, 35);
+    overflow: hidden;
+}
+
+.text {
+    position: absolute;
+    bottom: 5rem;
+}
+
+.active .text-container {
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media screen and (min-width:600px) {
+    .portfolio {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: -40px;
+        min-width: 600px;
+        max-width: 1000px;
+        height: 300px;
+        margin: 4rem auto;
+        z-index: 1;
+    }
+    .image {
+        min-width: 60px;
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.5s ease-in;
+        overflow: hidden;
+        position: relative;
+    }
+    .image.active {
+        max-width: 600px;
+    }
+    .text {
+        padding: 30px;
+        width: 300px;
+        left: -15px;
+    }
+}

@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "aliensBold";
+    src: url(../RedFonts/Goldman-Bold.ttf);
+}
+
+@font-face {
+    font-family: "aliensReg";
+    src: url(../RedFonts/Goldman-Regular.ttf);
+}
+
+body {
+    position: relative;
+    background-image: url(../RedImages/aliensBg.png);
+    background-size: cover;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-family: "aliensBold";
+    padding: 2%;
+}
+
+#title {
+    font-family: "aliensReg";
+    width: 100%;
+    height: 125px;
+    text-align: center;
+    line-height: 125px;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+span {
+    opacity: 0;
+    animation: opacity 20s infinite alternate;
+    width: 100%;
+}
+
+h1 #a {
+    animation-delay: 3s;
+}
+
+h1 #l {
+    animation-delay: 15s;
+}
+
+h1 #i {
+    animation-delay: 18s;
+}
+
+h1 #e {
+    animation-delay: 9s;
+}
+
+h1 #n {
+    animation-delay: 6s;
+}
+
+h1 #s {
+    animation-delay: 12s;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+    font-family: "aliensReg";
+}
+
+.section1,
+.section2,
+.section3,
+.section4 {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    margin: 10% 0;
+}
+
+.section1 p,
+.section2 p,
+.section3 p,
+.section4 p {
+    font-family: "aliensReg";
+    font-size: 0.8em;
+    line-height: 1.2em;
+    text-align: justify;
+    padding: 5%;
+    animation: flashing 10s infinite alternate;
+    animation-delay: 3s;
+}
+
+.section1 h3,
+.section2 h3,
+.section3 h3,
+.section4 h3 {
+    font-family: "aliensReg";
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 5%;
+    animation: flashing 10s infinite alternate;
+}
+
+@keyframes flashing {
+    0% {
+        opacity: 0;
+        text-shadow: 50px -27px 34px rgba(238, 237, 237, 1);
+        text-shadow: 73px 22px 20px rgba(238, 237, 237, 0.4);
+    }
+    10% {
+        opacity: 0.5;
+        text-shadow: -31px 35px 34px rgba(238, 237, 237, 0.2);
+        text-shadow: 53px -16px 5px rgba(238, 237, 237, 0.74);
+    }
+    20% {
+        opacity: 0.2;
+        text-shadow: 14px 21px 28px rgba(238, 237, 237, 0.91);
+        text-shadow: 50px -30px 22px rgba(238, 237, 237, 0.42);
+    }
+    30% {
+        opacity: 0.8;
+        text-shadow: 71px -24px 11px rgba(238, 237, 237, 0.64);
+        text-shadow: 71px -27px 34px rgba(238, 237, 237, 1);
+    }
+    40% {
+        opacity: 0.4;
+        text-shadow: -73px 22px 20px rgba(238, 237, 237, 0.4);
+        text-shadow: 14px 21px 28px rgba(238, 237, 237, 0.91);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 23px 17px 29px rgba(238, 237, 237, 0.6);
+        text-shadow: 73px 22px 20px rgba(238, 237, 237, 0.4);
+    }
+    60% {
+        opacity: 0.5;
+        text-shadow: 73px 37px 11px rgba(238, 237, 237, 0.7);
+        text-shadow: -31px 35px 34px rgba(238, 237, 237, 0.2);
+    }
+    70% {
+        opacity: 0.8;
+        text-shadow: -21px 26px 23px rgba(238, 237, 237, 0.98);
+        text-shadow: -31px 35px 34px rgba(238, 237, 237, 0.2);
+    }
+    80% {
+        opacity: 0.2;
+        text-shadow: 50px -30px 22px rgba(238, 237, 237, 0.42);
+        text-shadow: 14px 21px 28px rgba(238, 237, 237, 0.91);
+    }
+    90% {
+        opacity: 1;
+        text-shadow: 1px 22px 36px rgba(238, 237, 237, 0.47);
+        text-shadow: 71px -27px 34px rgba(238, 237, 237, 1);
+    }
+    100% {
+        opacity: 0.6;
+        text-shadow: -43px -16px 5px rgba(238, 237, 237, 0.74);
+        text-shadow: -31px 35px 34px rgba(238, 237, 237, 0.2);
+    }
+}
+
+#nostromo,
+#xeno,
+#marines,
+#queen {
+    width: 50%;
+    border: 0.5px solid white;
+}
+
+#bloc {
+    height: 20px;
+}
+
+#senpai {
+    position: absolute;
+    top: 3%;
+    left: -5%;
+    width: 30%;
+}
+
+#senpai2 {
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    width: 30%;
+    animation: jump 5s alternate ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jump {
+    0% {
+        top: 5%;
+        left: 70%;
+        display: block;
+    }
+    40% {
+        left: 10%;
+        top: 60%;
+        display: inline;
+    }
+    60% {
+        top: 24%;
+        left: 40%;
+        display: inline;
+    }
+    80% {
+        top: 30%;
+        left: 30%;
+        display: inline;
+    }
+    100% {
+        top: -15%;
+        left: -15%;
+        display: inline;
+    }
+}
